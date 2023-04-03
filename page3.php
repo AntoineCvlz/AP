@@ -40,7 +40,9 @@ if (isset($_POST['couverture_sociale'])){
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <title>LPF Clinique</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="lpf_logo_noir.png" type="image/icon type">
 </head>
     <body>
         <div class="sidebar2">
@@ -80,7 +82,7 @@ if (isset($_POST['couverture_sociale'])){
             <a href=""><p class='ptexte_sidebar' style='color:white;'>Tel : 0768259584</a></p>
             <a href=""><p class='ptexte_sidebar' style='color:white;'>Mail : LPFClinique @ mail.com</a></p>
             <a href="page_accueil.php">
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="grey" viewBox="0 0 448 512" style="margin-top: 420px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="grey" viewBox="0 0 448 512" style="margin-top: 100px;">
                 <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
             </svg>
             </a>

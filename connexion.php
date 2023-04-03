@@ -8,10 +8,12 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+<title>LPF Clinique</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="icon" href="lpf_logo_noir.png" type="image/icon type">
 </head>
 <body>
 <div class="sidebar2" >
@@ -28,7 +30,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <div class="titre_texte2" style="margin-top:20%;" ><h1>PAGE DE CONNEXION</h1></div><br><br>
+    <div class="titre_texte2" style="margin-top:10%;" ><h1>PAGE DE CONNEXION</h1></div><br><br>
 
     <div class="contenu_connexion ">
         <form class='texte' action=connexion.php method=post>

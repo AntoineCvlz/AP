@@ -26,12 +26,12 @@ $titre4 = "livret_".$var_numsecu;
     //dans ta balise <form> met bien enctype="multipart/form-data" sinon il ne prend pas en charge les fichers
 
     //Si dans le input fichier_patient le name du fichier n'est pas vide (un fichier n'est pas présent en gros) alors...
-    if(isset($_FILES['carte_identite']) && (isset($_FILES['carte_vitale'])) && (isset($_FILES['carte_mutuelle'])) && (isset($_FILES['livret_de_famille'])) && !empty($_FILES['carte_identite']['name']) && !empty($_FILES['carte_vitale']['name']) && !empty($_FILES['carte_mutuelle']['name']) && !empty($_FILES['livret_de_famille']['name'])) {
+    if(isset($_FILES['carte_identite']) && (isset($_FILES['carte_vitale'])) && (isset($_FILES['carte_mutuelle'])) && !empty($_FILES['carte_identite']['name']) && !empty($_FILES['carte_vitale']['name']) && !empty($_FILES['carte_mutuelle']['name']) && !empty($_FILES['livret_de_famille']['name'])) {
 
         //$_FILES est une variable utilisé pour les fichiers, le ['fichier_patient'] est le name de ton input file (voir formulaire en dessous)
         //Celle-ci permet de récupérer des infos sur le fichier comme le nom, le tmp, la taille,...
 
-        //tmp_name permet d'obtenir le tmp de ton fichier qui est lui unique à chaque fichier, car tu peut très bien avoir 2 fichiers dans 2 dossiers différent
+        //tmp_name permet d'obtenir le tmp de ton fichier qui est lui unique à chaque fichier, car tu peut très bien avoir 2 fichiers arthur.pdf dans 2 dossiers différent
         $filename = $_FILES['carte_identite']['tmp_name'];
         $filename2 = $_FILES['carte_vitale']['tmp_name'];
         $filename3 = $_FILES['carte_mutuelle']['tmp_name'];
@@ -110,11 +110,12 @@ $titre4 = "livret_".$var_numsecu;
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>LPF Clinique</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link rel="icon" href="lpf_logo_noir.png" type="image/icon type">
 </head>
 <body>
         <div class="sidebar2">
@@ -154,7 +155,7 @@ $titre4 = "livret_".$var_numsecu;
             <a href=""><p class='ptexte_sidebar' style='color:white;'>Tel : 0768259584</a></p>
             <a href=""><p class='ptexte_sidebar' style='color:white;'>Mail : LPFClinique @ mail.com</a></p>
             <a href="page_accueil.php">
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="grey" viewBox="0 0 448 512" style="margin-top: 420px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="grey" viewBox="0 0 448 512" style="margin-top: 100px;">
                 <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
             </svg>
             </a>
@@ -176,7 +177,7 @@ $titre4 = "livret_".$var_numsecu;
 
                         <div class="contenu_double">
                             <div>
-                                <p class="texte" style=>Carte de mutuelle</p>
+                                <p class="texte" style=>Carte mutuelle</p>
                                 <input type='file' style='border:none; style='margin-left:5vw'  class=demilistederoulante   name='carte_mutuelle' required >
                             </div>
                             <div>

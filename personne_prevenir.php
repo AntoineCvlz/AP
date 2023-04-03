@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="lpf_logo_noir.png" type="image/icon type">
+    <title>LPF Clinique</title>
 </head>
     <body>
     
@@ -26,7 +29,6 @@
                 <div class="trait"></div><br>
                 <div class="moncercle"><p class="cercle_texte">4</p></div>
             </div>
-    <link rel="stylesheet" href="style.css">
         <div class="sidebar">
         <div class="lpfclinique">LPF Clinique</div>
         

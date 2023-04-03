@@ -34,8 +34,9 @@ if (isset($_POST['formu_med'])){
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>LPF Clinique</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="lpf_logo_noir.png" type="image/icon type">
 </head>
 <body>
         <div class="sidebar2" >
@@ -79,7 +80,7 @@ if (isset($_POST['formu_med'])){
 
 
                                 <label style='color:black;'>Mot de passe</label>
-                                <input type="text" name="mdp_medecin" />
+                                <input type="password" name="mdp_medecin" />
 
 
                                 <!-- Oublie pas de mettre obligatoirement le role médecin quand il s'inscrit--> 
@@ -94,7 +95,7 @@ if (isset($_POST['formu_med'])){
         
         <div class="panneladmin" id='gaucheAdmin'>
                 
-                <div class="texte2">Ajouter un service</div>
+                <div class="texte2">Ajouter un nouveau service</div>
                         <div class="centrer_panneladmin">
                         <form method='POST' action='pannel_admin.php'>
                                 <form action=connexion.php method=post>
