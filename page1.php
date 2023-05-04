@@ -114,56 +114,56 @@ if (isset($_POST['formulaire'])){
                             </div>
                             <div>
                                 <p class="texte">Nom de naissance</p>
-                                <input class=preadmission type='text'  name='nom_naissance' class="input" required>
+                                <input class=preadmission type='text' maxlength='30' name='nom_naissance' class="input" required>
                             </div>
                         </div> 
 
                         <div class="contenu_double">
                             <div>
-                                <p class="texte" style=>Nom d'épouse</p>
-                                <input class=preadmission type='text'  name='nom_epouse' required >
+                                <p class="texte" style=>Nom d'épouse (Si marié)</p>
+                                <input class=preadmission type='text' maxlength='30' name='nom_epouse'>
                             </div>
                             <div>
                                 <p class="texte">Prenom</p>
-                                <input class=preadmission type='text'  name='prenom' class="input" required>
+                                <input class=preadmission type='text' maxlength='30' name='prenom' class="input" required>
                             </div>
                         </div> 
                         
                 
                                 <p class="texte">Numéro de sécurité sociale</p>
-                                    <input class=preadmission2 maxlength='15' type='text'  name='numsecu' minlength="15" size="15" required>
+                                    <input class=preadmission2 maxlength='15' type='text'  name='numsecu' minlength="15" size="15" pattern="[12][0-9]{2}(0[1-9]|1[0-2])(2[AB]|[0-9]{2})[0-9]{3}[0-9]{3}([0-9]{2})" title="Veuillez indiquer un numéro de sécurité sociale valide" required>
 
                         
                         <div class="contenu_double">
                             <div>
                                 <p class="texte" style=>Date de naissance</p>
-                                <input class=preadmission max="2023-04-06" type='date'  name='datenaissance' required>
+                                <input class=preadmission min="1920-01-01" max="2023-04-06" type='date' name='datenaissance' required>
                             </div>
                             <div>
                                 <p class="texte">Adresse</p>
-                                <input class=preadmission type='text'  name='adresse' class="input" required>
+                                <input class=preadmission type='text' maxlength='50' name='adresse' class="input" required>
                             </div>
                         </div> 
 
                         <div class="contenu_double">
                             <div>
                                 <p class="texte" style=>CP</p>
-                                <input class=preadmission maxlength='5' minlength='5' type='number'  name='CP' required >
+                                <input class=preadmission maxlength='5' minlength='5' type='text'  name='CP' required >
                             </div>
                             <div>
                                 <p class="texte">Ville</p>
-                                <input class=preadmission type='text'  name='Ville' class="input" required>
+                                <input class=preadmission type='text' maxlength='20' name='Ville' class="input" required>
                             </div>
                         </div>
 
                         <div class="contenu_double">
                             <div>
                                 <p class="texte" style=>E-Mail</p>
-                                <input class=preadmission type='text' name='email' required>
+                                <input class=preadmission type='text' name='email' maxlength='30' required>
                             </div>
                             <div>
                                 <p class="texte">Telephone</p>
-                                <input class=preadmission minlength='10' maxlength='10' type='number'  name='telephone' class="input" required>
+                                <input class=preadmission minlength='10' maxlength='10' type='text'  name='telephone' class="input" required>
                             </div>
                         </div>
                         <input type=submit value='Suivant'style='margin-top:70px;margin-bottom:20px;'  name='formulaire' class='resultat1' required>

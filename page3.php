@@ -116,9 +116,9 @@ if (isset($_POST['couverture_sociale'])){
                             
                         </div>  <!-- fin div tel-->
                     <p class="texte">Le nom de la mutuelle ou de l'assurance ?</p>
-                    <input class=preadmission style='margin:auto;' type='text'  name='nom_mut' required>
+                    <input class=preadmission style='margin:auto;' maxlength="20" type='text'  name='nom_mut'>
                     <p class="texte">Numero d'adhérent ?</p>
-                    <input class=preadmission style='margin:auto;' maxlength='5' type='number'  name='num_adherent' required>
+                    <input class=preadmission style='margin:auto;' size="5" maxlength='5' type='text'  name='num_adherent' required>
                 <p class="texte">Chambre particulière ?</p>
                 <select class="demilistederoulante" style='margin:auto;' name="chambre_particuliere" required placeholder='Choix'>
                     <option value=""></option>

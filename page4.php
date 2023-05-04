@@ -101,22 +101,22 @@ if (isset($_POST['formulaire'])){
                         <div class="contenu_double">
                             <div>
                                 <p class="texte" style=>Nom</p>
-                                <input class=preadmission type='text'  name='nom_naissance_prevenir' >
+                                <input class=preadmission type='text' maxlength="30"  name='nom_naissance_prevenir' required>
                             </div>
                             <div>
                                 <p class="texte">Prenom </p>
-                                <input class=preadmission type='text'  name='prenom_prevenir' class="input">
+                                <input class=preadmission type='text' maxlength="30" name='prenom_prevenir' class="input" required>
                             </div>
                         </div> 
                         
                         <div class="contenu_double">
                             <div>
                                 <p class="texte" style=>Téléphone</p>
-                                <input class=preadmission type='number' minlength='10' maxlength='10' name='telephone_prevenir' >
+                                <input class=preadmission type='text' size="10" minlength='10' maxlength='10' name='telephone_prevenir' pattern="^((\+)33|0)[1-9](\d{2}){4}$" required>
                             </div>
                             <div>
                                 <p class="texte">Adresse </p>
-                                <input class=preadmission type='text'  name='adresse_prevenir' class="input">
+                                <input class=preadmission type='text' maxlength="40" name='adresse_prevenir' class="input" required>
                             </div>
                         </div>
 
@@ -124,11 +124,11 @@ if (isset($_POST['formulaire'])){
                         <div class="contenu_double">
                             <div>
                                 <p class="texte" style=>Nom</p>
-                                <input class=preadmission type='text'  name='nom_naissance_confiance' >
+                                <input class=preadmission type='text' maxlength="30"  name='nom_naissance_confiance' required>
                             </div>
                             <div>
                                 <p class="texte">Prénom</p>
-                                <input class=preadmission type='text'  name='prenom_confiance' class="input">
+                                <input class=preadmission type='text' maxlength="30"  name='prenom_confiance' class="input" required>
                             </div>
                         </div>
 
@@ -136,11 +136,11 @@ if (isset($_POST['formulaire'])){
                         <div class="contenu_double">
                             <div>
                                 <p class="texte" style=>Téléphone</p>
-                                <input class=preadmission type='number' minlength='10' maxlength='10'  name='telephone_confiance' >
+                                <input class=preadmission type='text' size="10" minlength='10' maxlength='10'  name='telephone_confiance' pattern="^((\+)33|0)[1-9](\d{2}){4}$" required>
                             </div>
                             <div>
                                 <p class="texte">Adresse</p>
-                                <input class=preadmission type='text'  name='adresse_confiance' class="input">
+                                <input class=preadmission type='text' maxlength="40" name='adresse_confiance' class="input" required>
                             </div>
                         </div>
                             <input style='margin-top:5%' type=submit value='Suivant' name='formulaire' class='resultat1' required>

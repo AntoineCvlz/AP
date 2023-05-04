@@ -23,10 +23,10 @@ $titre4 = "livret_".$var_numsecu;
     //extrait les données de mon formulaire
     
 
-    //dans ta balise <form> met bien enctype="multipart/form-data" sinon il ne prend pas en charge les fichers
+    //dans la balise <form> on met bien enctype="multipart/form-data" sinon il ne prend pas en charge les fichers
 
     //Si dans le input fichier_patient le name du fichier n'est pas vide (un fichier n'est pas présent en gros) alors...
-    if(isset($_FILES['carte_identite']) && (isset($_FILES['carte_vitale'])) && (isset($_FILES['carte_mutuelle'])) && !empty($_FILES['carte_identite']['name']) && !empty($_FILES['carte_vitale']['name']) && !empty($_FILES['carte_mutuelle']['name']) && !empty($_FILES['livret_de_famille']['name'])) {
+    if(isset($_FILES['carte_identite']) && (isset($_FILES['carte_vitale'])) && (isset($_FILES['carte_mutuelle'])) && !empty($_FILES['carte_identite']['name']) && !empty($_FILES['carte_vitale']['name']) && !empty($_FILES['carte_mutuelle']['name'])) {
 
         //$_FILES est une variable utilisé pour les fichiers, le ['fichier_patient'] est le name de ton input file (voir formulaire en dessous)
         //Celle-ci permet de récupérer des infos sur le fichier comme le nom, le tmp, la taille,...
@@ -41,7 +41,7 @@ $titre4 = "livret_".$var_numsecu;
         //tu défini dans un tableau les extensions que tu souhaite avoir (genre png, jpg, mp3, mp4,...)
         $extensionValides = array('jpg', 'png', 'jpeg', 'pdf');
 
-        //strtolower met tout en minuscule, substr et strrchr je sais plus trop ce qu'il font mais ils sont nécessaire
+        //strtolower met tout en minuscule, 
         //Ici il défini où vérifier l'extension du fichier genre arthur.[l'extension est ici]
         $extensionUpload = strtolower(substr(strrchr($_FILES['carte_identite']['name'], '.'), 1));
         $extensionUpload2 = strtolower(substr(strrchr($_FILES['carte_vitale']['name'], '.'), 1));
@@ -49,7 +49,7 @@ $titre4 = "livret_".$var_numsecu;
         $extensionUpload4 = strtolower(substr(strrchr($_FILES['livret_de_famille']['name'], '.'), 1));
 
         //Si dans mon tableau d'extension valide mon fichier possède bien une des 4 extensions possible alors...
-        if(in_array($extensionUpload, $extensionValides) && in_array($extensionUpload2, $extensionValides) && in_array($extensionUpload3, $extensionValides) && in_array($extensionUpload4, $extensionValides)) {
+        if(in_array($extensionUpload, $extensionValides) && in_array($extensionUpload2, $extensionValides) && in_array($extensionUpload3, $extensionValides)) {
 
             //Je défini un chemin de dossier où va se trouver mon fichier plus tard
             $dossier = 'fichiers/';
@@ -77,7 +77,7 @@ $titre4 = "livret_".$var_numsecu;
           
 
             //si le chemin est lisible alors il insert dans la bdd
-            if(is_readable($chemin) && is_readable($chemin2) && is_readable($chemin3) && is_readable($chemin4)) {
+            if(is_readable($chemin) && is_readable($chemin2) && is_readable($chemin3)) {
 
     
                 $var_numsecu=$_SESSION["getnumsecu"];
@@ -167,22 +167,22 @@ $titre4 = "livret_".$var_numsecu;
                         <div class="contenu_double">
                             <div>
                                 <p class="texte" style=>Carte d'identité</p>
-                                <input type='file' style='border:none; style='margin-left:5vw' class=demilistederoulante  name='carte_identite' >
+                                <input type='file' style='border:none; style='margin-left:5vw' class=demilistederoulante  name='carte_identite' accept="image/png, image/gif, image/jpeg, .pdf" required>
                             </div>
                             <div>
                                 <p class="texte">Carte Vitale</p>
-                                <input type='file' style='border:none;' style='margin-left:5vw' class=demilistederoulante   name='carte_vitale' class="input" required>
+                                <input type='file' style='border:none;' style='margin-left:5vw' class=demilistederoulante   name='carte_vitale' class="input" accept="image/png, image/gif, image/jpeg, .pdf" required>
                             </div>
                         </div>
 
                         <div class="contenu_double">
                             <div>
                                 <p class="texte" style=>Carte mutuelle</p>
-                                <input type='file' style='border:none; style='margin-left:5vw'  class=demilistederoulante   name='carte_mutuelle' required >
+                                <input type='file' style='border:none; style='margin-left:5vw'  class=demilistederoulante   name='carte_mutuelle' accept="image/png, image/gif, image/jpeg, .pdf" required >
                             </div>
                             <div>
-                                <p class="texte">Livret de famille</p>
-                                <input type='file' style='border:none; style='margin-left:5vw'  class=demilistederoulante   name='livret_de_famille' class="input">
+                                <p class="texte">Livret de famille (Si mineur)</p>
+                                <input type='file' style='border:none; style='margin-left:5vw'  class=demilistederoulante   name='livret_de_famille' class="input" accept="image/png, image/gif, image/jpeg, .pdf">
                             </div>
                         </div>
                         <input type=submit style='margin-top:5vh; margin-bottom: 5vh;' name='documents' class='resultat1'>

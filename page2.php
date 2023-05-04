@@ -35,15 +35,18 @@ if (isset($_POST['hospitalisation'])){
 
 
 <!DOCTYPE html>
+<html>
+<title>LPF Clinique</title>
+<link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Tilt+Neon&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
-<html>
+<link rel="icon" href="lpf_logo_noir.png" type="image/icon type">
+
     <body>
-    <link rel="stylesheet" href="style.css">
 
     <div class="sidebar2">
     <p class='texte'>
@@ -80,7 +83,7 @@ if (isset($_POST['hospitalisation'])){
             <a href=""><p class='ptexte_sidebar' style='color:white;'>Tel : 0768259584</a></p>
             <a href=""><p class='ptexte_sidebar' style='color:white;'>Mail : LPFClinique @ mail.com</a></p>
             <a href="page_accueil.php">
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="grey" viewBox="0 0 448 512" style="margin-top: 420px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="grey" viewBox="0 0 448 512" style="margin-top: 100px;">
                 <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
             </svg>
             </a>
@@ -104,7 +107,7 @@ if (isset($_POST['hospitalisation'])){
                 <div class="hospitalisation">
                 <p class="texte">Date d'hospitalisation </p>
             </div>
-                <input type='date' min="2022-12-16" max="2023-12-16" class='preadmission2' name='datehospitalisation' required>
+                <input type='date' min="2023-04-07" max="2023-05-07" class='preadmission2' name='datehospitalisation' required>
                 <p class="texte">Heure de l'hospitalisation</p> 
                     <input type='time' class='preadmission2' name='datehospitalisationheure' required>
                 
